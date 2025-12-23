@@ -1,0 +1,282 @@
+.app-shell {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 1rem 0;
+}
+
+.field {
+  margin-bottom: 0.75rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.button {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.03s ease-in-out, box-shadow 0.15s, border-color 0.15s;
+  margin-top: 0.5rem;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #9ca3af;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button.primary {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+.button.primary:hover:not(:disabled) {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+}
+
+.button.small {
+  width: auto;
+  margin-top: 0;
+  padding: 0.35rem 0.6rem;
+  border-radius: 9px;
+  font-size: 0.85rem;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.35rem;
+}
+
+.hint.error {
+  color: #b91c1c;
+}
+
+.net-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.net-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.net-item:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.net-item.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.net-name {
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.15rem;
+}
+
+.net-meta {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.content-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.content-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.content-actions .button {
+  width: auto;
+  margin-top: 0;
+}
+
+.status-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-pill {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 0.35rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.status-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.status-actions .button {
+  width: auto;
+  margin-top: 0;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 520px;
+  overflow: auto;
+  padding-right: 0.25rem;
+}
+
+.message {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: #ffffff;
+}
+
+.message-meta {
+  display: flex;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-bottom: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.message-body {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message-encrypted {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.message-plain {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #065f46;
+  font-weight: 600;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 0.6rem;
+}
+
+.composer .button {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .composer {
+    grid-template-columns: 1fr;
+  }
+}
+
